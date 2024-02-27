@@ -13,7 +13,7 @@ NOTES = (
     ('A##', 'B', 'Cb'),
 )
 
-SCALES = {'maior': (0, 2, 4, 5, 7, 9, 11)}
+SCALES = {'maior': (0, 2, 4, 5, 7, 9, 11), 'menor': (0, 2, 3, 5, 7, 8, 10)}
 
 
 def get_index(tonica: str):
@@ -24,6 +24,5 @@ def get_index(tonica: str):
 
 def get_seq(tonica: str):
     SEQ = ['C', 'D', 'E', 'F', 'G', 'A', 'B']
-    seq = SEQ[SEQ.index(tonica[0]) :]
-    seq += SEQ[: SEQ.index(tonica[0])]
+    seq = SEQ[SEQ.index(tonica[0]) :] + SEQ[: SEQ.index(tonica[0])]
     return seq
