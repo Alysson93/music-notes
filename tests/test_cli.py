@@ -68,3 +68,35 @@ def test_acorde_cli_deve_conter_graus(note):
         ],
     )
     assert note in result.stdout
+
+
+def test_campo_harmonico_cli_retorna_0_stdout():
+    result = runner.invoke(
+        app,
+        [
+            'harmonic-fields',
+        ],
+    )
+    assert result.exit_code == 0
+
+
+@mark.parametrize('note', ['A', 'Bm', 'C#m', 'D', 'E', 'F#m', 'G#°'])
+def test_campo_harmonico_cli_deve_conter_notas(note):
+    result = runner.invoke(
+        app,
+        [
+            'harmonic-fields',
+        ],
+    )
+    assert note in result.stdout
+
+
+@mark.parametrize('note', ['I', 'ii', 'iii', 'IV', 'V', 'vi', 'vii-'])
+def test_campo_harmonico_cli_deve_conter_graus(note):
+    result = runner.invoke(
+        app,
+        [
+            'harmonic-fields',
+        ],
+    )
+    assert note in result.stdout

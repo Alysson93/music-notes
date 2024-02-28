@@ -39,3 +39,22 @@ poetry run music-notes chords Fm
 ```
 
 Por padão, a cifra é A
+
+
+## Campo Harmônico
+
+Você pode chamar o campo harmônico de um tom via linha de comando. Por exemplo:
+
+```bash
+poetry run music-notes harmonic-fields F menor
+```
+
+```bash
+┏━━━━┳━━━━━┳━━━━━┳━━━━━┳━━━━┳━━━━┳━━━━━┓
+┃ i  ┃ ii- ┃ III ┃ iv  ┃ v  ┃ VI ┃ VII ┃
+┡━━━━╇━━━━━╇━━━━━╇━━━━━╇━━━━╇━━━━╇━━━━━┩
+│ Fm │ G°  │ Ab  │ Bbm │ Cm │ Db │ Eb  │
+└────┴─────┴─────┴─────┴────┴────┴─────┘
+```
+
+Por padão, o tom é A maior

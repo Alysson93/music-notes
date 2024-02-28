@@ -34,7 +34,7 @@ def chord(cifra: str) -> dict[str, list[str]]:
     if cifra.endswith('m+'):
         cifra = cifra[:-2]
         degrees = ['I', 'III-', 'V+']
-        tonalidade = 'm5+'
+        tonalidade = 'menor-quinta-aumentada'
     elif cifra.endswith('m'):
         cifra = cifra[:-1]
         degrees = ['I', 'III-', 'V']
@@ -46,7 +46,7 @@ def chord(cifra: str) -> dict[str, list[str]]:
     elif cifra.endswith('+'):
         cifra = cifra[:-1]
         degrees = ['I', 'III', 'V+']
-        tonalidade = '5+'
+        tonalidade = 'quinta-aumentada'
     else:
         degrees = ['I', 'III', 'V']
         tonalidade = 'jonio'
