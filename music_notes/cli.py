@@ -2,6 +2,7 @@ from rich.console import Console
 from rich.table import Table
 from typer import Argument, Typer
 
+from music_notes.chords import chord
 from music_notes.scales import scale
 
 app = Typer()
@@ -15,6 +16,16 @@ def scales(
 ):
     table = Table()
     notes, degrees = scale(tonica, tonalidade).values()
+    for degree in degrees:
+        table.add_column(degree)
+    table.add_row(*notes)
+    console.print(table)
+
+
+@app.command()
+def chords(cifra: str = Argument('A', help='Cifra')):
+    table = Table()
+    notes, degrees = chord(cifra).values()
     for degree in degrees:
         table.add_column(degree)
     table.add_row(*notes)

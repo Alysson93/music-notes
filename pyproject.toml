@@ -6,7 +6,7 @@ authors = ["Your Name <you@example.com>"]
 readme = "README.md"
 
 [tool.poetry.scripts]
-scale = "music_notes.cli:app"
+music-notes = "music_notes.cli:app"
 
 [tool.poetry.dependencies]
 python = "^3.12"
@@ -40,7 +40,7 @@ profile = "black"
 line_length = 79
 
 [tool.taskipy.tasks]
-run = "poetry run scale"
+run = "poetry run music-notes"
 lint = "blue . && isort ."
 docs = "mkdocs serve"
 pre_test = "task lint"

@@ -4,10 +4,12 @@
 
 ## Como usar?
 
+## Escalas
+
 Você pode chamar as escalas via linha de comando. Por exemplo:
 
 ```bash
-poetry run scale f menor
+poetry run music-notes  scales f menor
 ```
 
 ```bash
@@ -19,3 +21,21 @@ poetry run scale f menor
 ```
 
 Por padão, a escala é A, e a tonalidade é maior.
+
+## Acordes
+
+Você pode chamar os acordes via linha de comando. Por exemplo:
+
+```bash
+poetry run music-notes chords Fm
+```
+
+```bash
+┏━━━┳━━━━━━┳━━━┓
+┃ I ┃ III- ┃ V ┃
+┡━━━╇━━━━━━╇━━━┩
+│ F │ Ab   │ C │
+└───┴──────┴───┘
+```
+
+Por padão, a cifra é A
