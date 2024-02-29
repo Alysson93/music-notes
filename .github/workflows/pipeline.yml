@@ -5,7 +5,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Roda um comando!
-        run: echo $(pwd)
-      - name: Roda outro comando.
-        run: echo $(ls)
+      - name: Copia os arquivos do repo
+        uses: actions/checkout@v4
+      - name: Instalar o Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
