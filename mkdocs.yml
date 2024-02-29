@@ -12,6 +12,7 @@ theme:
 
 markdown_extensions:
   - attr_list
+  - admonition
 
 extra_css:
   - stylesheets/extra.css
@@ -20,7 +21,13 @@ watch:
   - music_notes
 
 plugins:
+- macros
 - mkdocstrings:
     handlers:
       python:
         paths: [music_notes]
+
+
+extra:
+  commands:
+    run: poetry run music-notes

@@ -4,12 +4,16 @@
 
 ## Como usar?
 
+{% include "templates/cards.html" %}
+
+{% include "templates/installation.md" %}
+
 ## Escalas
 
 Você pode chamar as escalas via linha de comando. Por exemplo:
 
 ```bash
-poetry run music-notes  scales f menor
+{{ commands.run }} scales f menor
 ```
 
 ```bash
@@ -27,7 +31,7 @@ Por padão, a escala é A, e a tonalidade é maior.
 Você pode chamar os acordes via linha de comando. Por exemplo:
 
 ```bash
-poetry run music-notes chords Fm
+{{ commands.run }} chords Fm
 ```
 
 ```bash
@@ -46,7 +50,7 @@ Por padão, a cifra é A
 Você pode chamar o campo harmônico de um tom via linha de comando. Por exemplo:
 
 ```bash
-poetry run music-notes harmonic-fields F menor
+{{ commands.run }} harmonic-fields F menor
 ```
 
 ```bash
